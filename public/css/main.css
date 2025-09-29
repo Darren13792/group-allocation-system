@@ -1,0 +1,167 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 260px;
+}
+
+.hover {
+    cursor: pointer;
+}
+
+.hover:hover {
+    color:red
+}
+
+.clickable {
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.closed {
+    transform: rotate(180deg);
+}
+
+.fa-chevron-up {
+    transition: transform .2s ease-in-out;
+}
+
+.stretch-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.clickable:hover,
+.collapse:hover a,
+.list-group-item:hover text,
+.stretch-link:hover + div,
+.fa-chevron-up:hover {
+    color: grey;
+}
+
+.list-group-item.active:hover text,
+.list-group-item.active .fa-chevron-up:hover,
+.list-group-item.active .stretch-link:hover + div {
+    color: #e1e1e1;
+}
+
+.list-group-item,.nav-link {
+    background-color: transparent;
+}
+
+.alert > .btn-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    padding: 1.25rem 1rem;
+}
+
+.break-words {
+    max-width: 250px;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+.progressbar li {
+    list-style-type: none;
+    width: 25%;
+    position: relative;
+    text-align: center;
+}
+
+.progressbar li:before {
+    content: attr(step);
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    display: block;
+    text-align: center;
+    margin: auto;
+    border-radius: 50%;
+    color: white;
+    background-color: lightgrey;
+}
+
+
+.progressbar li:after {
+    width: 100%;
+    height: 5px;
+    content: "";
+    position: absolute;
+    background-color: lightgrey;
+    top: 25px;
+    left: 0;
+    z-index: -1;
+}
+
+.progressbar li.active:before,
+.progressbar li.active:after {
+    background-color: #0d6efd;
+}
+
+th,td {
+    white-space: nowrap;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+.users-data-table th {
+    vertical-align: middle;
+}
+
+.scrollX {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.scrollX .dataTable tbody {
+    border-top: calc(var(--bs-border-width)* 1.75) solid currentcolor;
+}
+
+.dataTable td, .dataTable th {
+    text-align: left!important;
+}
+
+.dataTable td.center-actions {
+    text-align: center !important;
+}
+
+@media (min-width: 767.98px) {
+    main {
+        padding-left: 260px;
+    }
+    .sidebar-pages {
+        margin-top: 1rem !important;
+        margin-right: 1rem !important;
+        margin-left: 1rem !important;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .sidebar {
+        position: static;
+        width: 100%;
+    }
+    .position-sticky {
+        position: fixed!important;
+        width: 100%;
+        z-index: 10;
+        box-shadow: var(--bs-box-shadow);
+    }
+    .sidebar-pages {
+        padding-top: 0.5rem !important;
+        padding-bottom: 0.5rem !important;
+        padding-right: 1rem !important;
+        padding-left: 1rem !important;
+        border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+        background-color: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important;
+    }
+}
